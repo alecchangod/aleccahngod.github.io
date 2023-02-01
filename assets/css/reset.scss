@@ -11,9 +11,10 @@
 }
 
 // Allow percentage-based heights in the application
-html, body {
+html {
   font-family: "Poppins", "Helvetica", "Arial", sans-serif;
-  height: 100%;
+  height: 100vh;
+  height: 100dvh;
 }
 
 /*
@@ -23,6 +24,7 @@ html, body {
 */
 body {
   line-height: 1.5;
+  min-height: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -45,6 +47,13 @@ h1, h2, h3, h4, h5, h6 {
 // Avoid text overflows
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
+}
+
+// List style
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 // Create a root stacking context

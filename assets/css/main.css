@@ -26,13 +26,25 @@ main {
 section {
   text-align: center;
 }
+
 section h2 {
   margin-bottom: 0.5rem;
 }
+
 section i {
   color: #2d78ae;
   font-size: 3rem;
 }
+
+.svg-icon {
+  fill: #2d78ae !important;
+  transition: fill 0.3s ease; /* Optional, for smooth color transition */
+}
+
+a:hover .svg-icon {
+  filter: brightness(75%);
+}
+
 section .options-list {
   display: flex;
   flex-flow: row nowrap;
@@ -41,33 +53,42 @@ section .options-list {
   gap: 1rem;
   margin: 1rem 0;
 }
+
 section .options-list i {
   transition: filter 0.3s ease;
 }
+
 section .options-list i:hover {
   filter: brightness(75%);
 }
+
 section .message {
   margin-top: 1rem;
 }
+
 section.introduction {
   font-size: 1.25em;
 }
+
 section.introduction i {
   font-size: 4rem;
   margin-bottom: 0.5rem;
 }
+
 section.introduction h1 {
   color: #2d78ae;
   font-size: 1.25em;
 }
+
 section.introduction p {
   margin-top: 0.5rem;
 }
+
 section.support .support-method img {
   height: 2.75rem;
 }
-section + section {
+
+section+section {
   margin-top: 2.5rem;
 }
 
@@ -76,13 +97,60 @@ section + section {
     padding: 5vh 0;
     padding: 5dvh 0;
   }
+
   main {
     font-size: 0.875rem;
   }
+
   section.support .support-method img {
     height: 2.5rem;
   }
-  section + section {
+
+  section+section {
     margin-top: 1.5rem;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  html {
+    background: #092d3c;
+  }
+
+  main {
+    background: #0a384d;
+    box-shadow: 20px 20px 60px hwb(199 9% 49%), -20px -20px 60px hwb(199 9% 49%);
+  }
+  section i {
+    color: rgb(51, 113, 157);
+  }
+
+  .svg-icon {
+    fill: rgb(51, 113, 157) !important;
+  }
+
+  section.introduction h1 {
+    color: rgb(51, 113, 157);
+    font-size: 1.25em;
+  }
+
+  section.introduction p {
+    color: rgb(51, 113, 157);
+  }
+
+  section.contact h2 {
+    color: rgb(51, 113, 157);
+  }
+
+  section.support h2 {
+    color: rgb(51, 113, 157);
+  }
+
+  section.support .message p {
+    color: rgb(51, 113, 157);
+  }
+  
+
+}
